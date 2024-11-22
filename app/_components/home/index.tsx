@@ -15,6 +15,13 @@ function Home() {
   const dragonLottieRef = useLottie(dragonLottieData);
   const arrowDownLottieRef = useLottie(arrowLottieData);
 
+  const scrollToAbout = () => {
+    const $about = document.querySelector("#about");
+    if ($about) {
+      $about.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -48,7 +55,10 @@ function Home() {
           </p>
           <p>
             偶尔
-            <span className="[&_.typed-cursor]:text-[#409eff]" ref={typedElement} />
+            <span
+              className="[&_.typed-cursor]:text-[#409eff]"
+              ref={typedElement}
+            />
           </p>
         </Col>
         <Col span={24} md={9} className="py-3 flex items-center justify-center">
@@ -75,6 +85,7 @@ function Home() {
             className="h-[120px] w-[120px] cursor-pointer relative after:absolute after:inset-0 
                     after:bg-[#8cc5ff] after:rounded-full after:opacity-0 after:transition-all
                     hover:after:opacity-20 hover:after:scale-110"
+            onClick={scrollToAbout}
           >
             <div ref={arrowDownLottieRef} />
           </div>
