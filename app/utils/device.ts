@@ -1,4 +1,8 @@
 export const checkIsMobileDevice = () => {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+
   const toMatch = [
     /Android/i,
     /webOS/i,
