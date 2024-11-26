@@ -5,7 +5,7 @@ import Life from "./life";
 
 function About() {
   return (
-    <div
+    <section
       id="about"
       className="w-screen box-border px-6 py-20 transform translate-z-0 text-center overflow-hidden"
       style={{
@@ -19,7 +19,7 @@ function About() {
       <Profile />
 
       <Life />
-    </div>
+    </section>
   );
 }
 
